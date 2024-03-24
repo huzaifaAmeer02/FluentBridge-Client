@@ -71,7 +71,7 @@ const SpeakMain = () => {
                     </button>
                 </Link>
                 {/* Practice With FluentBridge Button */}
-                <Link to="#" className="flex justify-center">
+                <Link to="https://fluent-bridge-speaking.vercel.app/" className="flex justify-center">
                     <button className="w-full rounded-full bg-purple-600 hover:bg-purple-900 text-white py-4 px-20 md:py-6 text-center font-bold text-lg md:text-xl shadow-lg  transition duration-300 ease-in-out">
                         Practice With FluentBridge
                     </button>
