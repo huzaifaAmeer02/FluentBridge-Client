@@ -33,6 +33,8 @@ export default function Login() {
                 position: 'relative', // Make the container relative to position the Lottie animation
                 overflow: 'hidden', // Hide overflow to prevent animation from overflowing
             }}
+            initial={{ opacity: 0 }} // Initial opacity set to 0
+            animate={{ opacity: 1 }} // Animate opacity to 1 when component mounts
         >  
         
               {/* Render the Lottie animation as the background */}
@@ -50,9 +52,12 @@ export default function Login() {
                 }}
             />
 
-
-
-            <div className="container mx-auto max-w-lg p-8 bg-white bg-opacity-90 shadow-lg mb-2">
+            <motion.div
+                className="container mx-auto max-w-lg p-8 bg-white bg-opacity-90 shadow-lg mb-2"
+                initial={{ opacity: 0, y: 50 }} // Initial opacity set to 0 and y position moved down
+                animate={{ opacity: 1, y: 0 }} // Animate opacity to 1 and y position back to original
+                transition={{ duration: 0.5 }} // Transition duration set to 0.5 seconds
+            >
                 <Link to="/activities" className="back-to-activities flex items-center text-blue-500 font-bold hover:text-blue-700 transition duration-300 ease-in-out rounded-lg p-2 bg-white absolute left-4 top-4">
                     <IoIosArrowBack />
                 </Link>
@@ -85,7 +90,7 @@ export default function Login() {
                         <Link to="/signup" className="border border-purple-950 text-purple-950 py-2 px-4 w-full rounded inline-block text-center">Sign up</Link>
                     </div>
                 </div>
-            </div>
+            </motion.div>
         </motion.div>
     );
 }
